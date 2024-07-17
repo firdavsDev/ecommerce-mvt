@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Store main page
+{% endblock %}
+
+{% block content %}
+ #section
+{% endblock %}

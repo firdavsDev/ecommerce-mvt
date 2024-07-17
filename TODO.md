@@ -1,0 +1,12 @@
+## Stream 1
+- [x] Frontend template
+- [x] Folder structure (template)
+- [ ] Apps structure (template):
+    - [x] store (products and categories and variations models) + admin
+    - [ ] payment
+    - [ ] account
+    - [ ] carts
+    - [ ] orders
+    - [ ] reviews
+    - [ ] blog
+    - [ ] common
