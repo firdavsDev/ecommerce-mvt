@@ -2,11 +2,11 @@
 - [x] Frontend template
 - [x] Folder structure (template)
 - [ ] Apps structure (template):
-    - [x] store (products and categories and variations models) + admin
-    - [ ] payment
+    - [x] store (products and categories and variations models) + admin + LIST & Detail views
     - [ ] account
     - [ ] carts
     - [ ] orders
+    - [ ] payment
     - [ ] reviews
     - [ ] blog
-    - [ ] common
+    - [x] common
