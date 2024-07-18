@@ -1,9 +1,17 @@
-## Stream 1
+## Stream TODOs
 - [x] Frontend template
 - [x] Folder structure (template)
 - [ ] Apps structure (template):
     - [x] store (products and categories and variations models) + admin + LIST & Detail views
-    - [ ] account
+    - [ ] accounts:
+        - [x] custom user
+        - [x] profile
+        - [x] address
+        - [x] signals
+        - [x] Login, Logout, Register
+        - [ ] Password reset
+        - [ ] Email verification
+        - [ ] Social login (Google, Telegram)
     - [ ] carts
     - [ ] orders
     - [ ] payment

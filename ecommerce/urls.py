@@ -7,6 +7,8 @@ urlpatterns = [
     path("admin/panel/", admin.site.urls),  # fake url
     # Include store urls
     path("", include("store.urls")),
+    # Include accounts urls
+    path("accounts/", include("accounts.urls")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
