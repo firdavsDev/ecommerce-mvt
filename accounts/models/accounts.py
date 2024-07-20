@@ -14,11 +14,13 @@ class CustomUser(AbstractUser, PermissionsMixin):
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["first_name"]
+    is_active = models.BooleanField(default=False)
 
     objects = CustomUserManager()
 
     def __str__(self):
         return f"{self.email}"
 
+    @property
     def get_full_name(self):
         return f"{self.first_name} {self.last_name}"

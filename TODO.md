@@ -8,9 +8,9 @@
         - [x] profile
         - [x] address
         - [x] signals
-        - [x] Login, Logout, Register
+        - [x] Login, Logout, Register 
         - [ ] Password reset
-        - [ ] Email verification
+        - [x] Email verification
         - [ ] Social login (Google, Telegram)
     - [ ] carts
     - [ ] orders

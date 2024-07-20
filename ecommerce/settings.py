@@ -138,3 +138,9 @@ MEDIA_ROOT = BASE_DIR / "media"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+# Email configuration
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True  # TLS is a cryptographic protocol that provides end-to-end security of data sent between applications over the Internet.
+EMAIL_HOST_USER = "xackercoder@gmail.com"
+EMAIL_HOST_PASSWORD = "tyti ufyq clvi ndbr"
