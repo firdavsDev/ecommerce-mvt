@@ -142,5 +142,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 # Email configuration
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True  # TLS is a cryptographic protocol that provides end-to-end security of data sent between applications over the Internet.
-EMAIL_HOST_USER = "xackercoder@gmail.com"
-EMAIL_HOST_PASSWORD = "tyti ufyq clvi ndbr"
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
