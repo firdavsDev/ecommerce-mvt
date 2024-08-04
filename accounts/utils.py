@@ -8,7 +8,7 @@ from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 
 
-def get_activation_link(user, request) -> str:
+def get_activation_link(user, request, redirect_url: str = "activate") -> str:
     """Generates an activation link for the user.
 
     Args:
@@ -22,7 +22,7 @@ def get_activation_link(user, request) -> str:
         domain = get_current_site(request)
         uid64 = urlsafe_base64_encode(force_bytes(user.pk))
         token = default_token_generator.make_token(user)
-        return f"http://{domain}/accounts/activate/{uid64}/{token}"
+        return f"http://{domain}/accounts/{redirect_url}/{uid64}/{token}"
     except Exception as e:
         logger.error(e)
         raise e

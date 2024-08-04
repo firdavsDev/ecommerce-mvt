@@ -3,7 +3,6 @@
 {% load crispy_forms_tags %}
 
 
-
 {% block title %}
 Login page
 {% endblock %}
@@ -11,17 +10,9 @@ Login page
 {% block content %}
 
 
-
-
 <!-- ========================= SECTION CONTENT ========================= -->
 <section class="section-conten padding-y" style="min-height:84vh">
-    {%if messages%}
-    {% for message in messages %}
-    <div class="alert alert-{{ message.tags }}">
-        {{ message }}
-    </div>
-    {% endfor %}
-    {% endif %}
+
     <!-- ============================ COMPONENT LOGIN   ================================= -->
     <div class="card mx-auto" style="max-width: 380px; margin-top:100px;">
         <div class="card-body">
@@ -32,12 +23,12 @@ Login page
                 <div class=" form-group">
                     <button type="submit" class="btn btn-primary btn-block"> Login </button>
                 </div> <!-- form-group// -->
-                <p class="text-center">Forgot password? <a href="#">Recover</a></p>
+                <p class="text-center">Forgot password? <a href="{% url 'accounts:reset_password' %}">Recover</a></p>
             </form>
         </div> <!-- card-body.// -->
     </div> <!-- card .// -->
 
-    <p class="text-center mt-4">Don't have account? <a href="#">Sign up</a></p>
+    <p class="text-center mt-4">Don't have account? <a href="{% url 'accounts:register' %}">Sign up</a></p>
     <br><br>
     <!-- ============================ COMPONENT LOGIN  END.// ================================= -->
 

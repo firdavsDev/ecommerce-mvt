@@ -1,7 +1,8 @@
 import os
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+from django.contrib.messages import constants as messages
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -142,5 +143,13 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 # Email configuration
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True  # TLS is a cryptographic protocol that provides end-to-end security of data sent between applications over the Internet.
-EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_USER = "xackercoder@gmail.com"
+EMAIL_HOST_PASSWORD = "zyvn ixak rgfk jedv"
+
+# change message tags
+MESSAGE_TAGS = {
+    messages.ERROR: "danger",
+}
+
+# SESSION SETTINGS
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 7  # 1 week

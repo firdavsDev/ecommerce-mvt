@@ -1,5 +1,5 @@
 """
-Run functions in the background decorator for Django.
+Run functions in the background decorator for Django #TODO: implement this with Celery
 """
 
 import threading

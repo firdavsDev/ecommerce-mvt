@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.views import LoginView as AuthLoginView
 from django.shortcuts import redirect
 
-from ..forms import CustomUserLoginForm
+from ..forms.user_forms import CustomUserLoginForm
 from ..models.accounts import CustomUser
 
 
@@ -17,8 +17,10 @@ class LoginView(AuthLoginView):
         password = form.cleaned_data["password"]
         user = authenticate(email=email, password=password)
         if user is not None:
+            messages.success(self.request, "You have successfully logged in.")
             login(self.request, user)
-            return redirect("store:store_list")
+            return redirect("accounts:profile")
+        messages.error(self.request, "Invalid email or password.")
         return super().form_invalid(form)
 
 

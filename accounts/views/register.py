@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from django.views.generic import CreateView
 
-from ..forms import CustomUserCreationForm
+from ..forms.user_forms import CustomUserCreationForm
 from ..models.accounts import CustomUser
 from ..service.activation_email import send_activation_email
 

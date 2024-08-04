@@ -20,10 +20,12 @@ def send_reset_password_email(user, request):
     try:
         subject = "Reset your password"
         message = render_to_string(
-            "accounts/reset_password.html",
+            "accounts/activation_password.html",
             {
                 "full_name": user.get_full_name,
-                "reset_password_link": get_activation_link(user, request),
+                "reset_password_link": get_activation_link(
+                    user, request, redirect_url="reset_password"
+                ),
             },
         )
         email = EmailMessage(subject, message, to=[user.email])

@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 
-from .models.accounts import CustomUser
+from ..models.accounts import CustomUser
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -30,14 +30,3 @@ class CustomUserLoginForm(forms.Form):
     def __init__(self, request, *args, **kwargs):
         # simply do not pass 'request' to the parent
         super().__init__(*args, **kwargs)
-
-
-# form for user password reset
-class ResetPasswordForm(forms.Form):
-    email = forms.EmailField(label="Email")
-
-    def clean_email(self):
-        email = self.cleaned_data.get("email")
-        if not CustomUser.objects.filter(email=email).exists():
-            raise forms.ValidationError("This email is not registered!")
-        return email

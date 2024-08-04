@@ -78,6 +78,7 @@ class ProfileAdmin(admin.ModelAdmin):
     ]
     list_filter = ["region", "district"]
     search_fields = ["user__first_name"]
+    autocomplete_fields = ["user", "region", "district"]
 
 
 admin.site.register(Profile, ProfileAdmin)
